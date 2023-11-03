@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useAuthorizationContext } from "../AuthorizationContext";
-import { useRequest } from "../hooks/useRequest";
+import { useAuthorizationContext } from "../../../AuthorizationContext";
+import { useRequest } from "../../../hooks/useRequest";
 import { useNavigate } from "react-router-dom";
-
+import styles from "./styles.module.css";
 const AdminAddProduct: React.FC = () => {
   const { loggedin } = useAuthorizationContext();
   const navigate = useNavigate();
@@ -72,7 +72,7 @@ const AdminAddProduct: React.FC = () => {
   }, [requestData]);
 
   return (
-    <div>
+    <div className={styles.Container}>
       <input ref={brandRef} placeholder="Brand" type="string" required />
       <input ref={categoryRef} placeholder="Category" type="string" required />
       <textarea
@@ -107,9 +107,10 @@ const AdminAddProduct: React.FC = () => {
         onChange={(e) => uploadImageLinks(3, e.target.value)}
         required
       />
+      <div className={styles.buttonDiv}>
       <button onClick={() => addProduct()}>Add new product</button>
       <button onClick={() => navigate(-1)}>back</button>
-      
+      </div>
       <p>{message}</p>
     </div>
   );

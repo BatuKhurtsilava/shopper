@@ -4,8 +4,8 @@ import "./App.css";
 import { routes } from "./routes";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthorizationContextProvider } from "./AuthorizationContext";
-import AdminLoginPage from "./Pages/AdminLoginPage";
-import AdminNavigation from "./Components/AdminNavigation";
+import AdminLoginPage from "./Pages/AdminPages/login/AdminLoginPage";
+import AdminNavigation from "./Components/Navigation/AdminNavigation";
 
 function App() {
   return (

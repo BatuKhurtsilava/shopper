@@ -1,0 +1,30 @@
+
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.InfoContainer {
+  margin-left: 30px;
+}
+
+.InfoContainer a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.InfoContainer button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.InfoContainer button:hover {
+  cursor: pointer;
+}

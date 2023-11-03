@@ -1,0 +1,40 @@
+
+.Container {
+ background-color: rgba(221, 229, 244, 0.866);
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(221, 229, 244, 0.652);
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Header {
+  text-align: center;
+}
+.Text {
+  text-align: end;
+  transform: translateX(-50px);
+}
+
+.Button {
+ margin-top: 15px;
+ width: 60px;
+}
+
+
+
+.Input {
+  height: 20px;
+  
+}
+

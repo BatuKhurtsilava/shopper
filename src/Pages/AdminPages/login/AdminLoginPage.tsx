@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useRef, useState } from "react";
 import { Outlet, useNavigate, Link } from "react-router-dom";
 import { json } from "stream/consumers";
-import { useAuthorizationContext } from "../AuthorizationContext";
-import AdminNavigation from "../Components/AdminNavigation";
+import { useAuthorizationContext } from "../../../AuthorizationContext";
+import AdminNavigation from "../../../Components/Navigation/AdminNavigation";
+import styles from "./styles.module.css";
 
 interface IadminLoginPage {
   username: string;
@@ -39,11 +40,23 @@ const AdminLoginPage: React.FC = () => {
 
   console.log(loggedin);
   return (
-    <div>
-      <form onSubmit={handleLogin}>
-        <input ref={userRef} placeholder="Username" />
-        <input type={"password"} ref={passwordRef} placeholder="Password" />
-        <button type="submit">login</button>
+    <div className={styles.Container}>
+      <form className={styles.Form} onSubmit={handleLogin}>
+        <h3 className={styles.Header}>
+          Welcome To Shopper's <br /> Admin Page{" "}
+        </h3>
+        <p className={styles.Text}>Username</p>
+        <input className={styles.Input} ref={userRef} placeholder="Username" />
+        <p className={styles.Text}>Password</p>
+        <input
+          className={styles.Input}
+          type={"password"}
+          ref={passwordRef}
+          placeholder="Password"
+        />
+        <button className={styles.Button} type="submit">
+          login
+        </button>
       </form>
       {loggedin === false && <p>login or password is incorect</p>}
     </div>

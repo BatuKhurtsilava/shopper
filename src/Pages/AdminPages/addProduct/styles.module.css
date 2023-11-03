@@ -1,0 +1,24 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.Container input {
+  margin-top: 5px;
+}
+
+.Container textarea{
+  margin-top: 5px;
+}
+
+.Container button {
+  width:10%;
+  
+}
+
+.ButtonDiv {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: raw;
+}

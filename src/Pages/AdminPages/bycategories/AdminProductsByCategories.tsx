@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useAuthorizationContext } from "../AuthorizationContext";
-import { useRequest } from "../hooks/useRequest";
-import { UseRequestResult } from "../hooks/useRequest";
-import { dataType } from "../hooks/useRequest";
+import { useAuthorizationContext } from "../../../AuthorizationContext";
+import { useRequest } from "../../../hooks/useRequest";
+import { UseRequestResult } from "../../../hooks/useRequest";
+import { dataType } from "../../../hooks/useRequest";
 import { useNavigate } from "react-router-dom";
-
+import styles from "./styles.module.css";
 const AdminProductsByCategories: React.FC = () => {
   const [products, setProducts] = useState<dataType[] | null>(null);
   const API_KEY = "tkhyLoZW3FeAwnacIx7zbmTlvnPeg2vOarQ32hl0CLECnAYdUA";
@@ -54,20 +54,29 @@ const AdminProductsByCategories: React.FC = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      {fetchLoading && <p>{fetchLoading}</p>}
+      {fetchLoading && <p>loading...</p>}
       {loggedin &&
         products &&
         products.length > 0 &&
         products?.map((prod, i) => (
-          <div key={i}>
-            <p>{prod.brand}</p>
+          <div key={i} className={styles.Container}>
             <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-              <image xlinkHref={prod.images[0]} width="100" height="100" />
+              <image
+                className={styles.Image}
+                xlinkHref={prod.images[0]}
+                width="100"
+                height="100"
+              />
             </svg>
-            <Link to={`/admin/product/${prod._uuid}`}>edit product info</Link>
-            <button onClick={() => handleDelete(prod._uuid)}>
-              Delete Product
-            </button>
+            <div className={styles.InfoContainer}>
+              <p>Brand: {prod.brand}</p>
+              <p>Price: {prod.price}</p>
+              <p>Stock: {prod.stock}</p>
+              <Link to={`/admin/product/${prod._uuid}`}>Edit product info</Link>
+              <button onClick={() => handleDelete(prod._uuid)}>
+                Delete Product
+              </button>
+            </div>
           </div>
         ))}
       <button onClick={() => navigate(-1)}>back</button>

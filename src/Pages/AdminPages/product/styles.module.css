@@ -1,0 +1,69 @@
+.MainContainer {
+display: flex;
+flex-direction: column;
+}
+
+.ImageContainer {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.ImageContainer input {
+  transform: translateY(-20px);
+  margin-right: 20px;
+}
+
+.InputContainer  {
+display: flex;
+flex-direction: row;
+align-items: center;
+
+}
+
+.InputContainer input {
+  height: 18px;
+  margin-right: 5px;
+}
+
+.InputContainer p {
+  margin-right: 8px;
+}
+
+.InputContainer textarea {
+  height: 100px;
+  width: 300px;
+  margin-right: 5px;
+  margin-top: 5px;
+  transform: translateY(30px);
+}
+
+.Link {
+  color: black;
+  height: 30px;
+  text-decoration: none;
+  padding: 2px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  
+  }
+  
+  .Link:visited {
+    color: inherit; 
+  }
+  
+  .Link:active {
+    color: inherit; 
+  }
+
+ Button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  Button:hover {
+    cursor: pointer;
+  }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useAuthorizationContext } from "../AuthorizationContext";
+import { useAuthorizationContext } from "../../../AuthorizationContext";
 import { Link } from "react-router-dom";
-import "../styles/AdminPage.module.css";
-import AdminNavigation from "../Components/AdminNavigation";
+import AdminNavigation from "../../../Components/Navigation/AdminNavigation";
+import styles from "./styles.module.css"
 
 const AdminPage: React.FC = () => {
   const API_KEY = "tkhyLoZW3FeAwnacIx7zbmTlvnPeg2vOarQ32hl0CLECnAYdUA";
@@ -21,7 +21,7 @@ const AdminPage: React.FC = () => {
   const { loggedin } = useAuthorizationContext();
 
   const getProductsFromServer = async () => {
-    setLoading(true)
+    setLoading(true);
     fetch("/api/v1/products", {
       method: "GET",
       headers: {
@@ -42,10 +42,9 @@ const AdminPage: React.FC = () => {
 
       .catch((err) => {
         console.error(err);
-        setError(error)
-        
+        setError(error);
       })
-      .finally(()=>setLoading(false));
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -59,11 +58,10 @@ const AdminPage: React.FC = () => {
       {error && <p>{error}</p>}
       {loading && <p>{loading}</p>}
       {loggedin && (
-        <div>
-          <nav>Categories</nav>
+        <div className={styles.Container}>
           {categories.map((category) => (
             <div>
-              <Link className="Link" to={`/admin/category/${category}`}>
+              <Link className={styles.Link} to={`/admin/category/${category}`}>
                 {category}
               </Link>
             </div>
