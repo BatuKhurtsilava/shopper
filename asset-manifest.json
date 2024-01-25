@@ -1,15 +1,29 @@
 {
   "files": {
-    "main.css": "/shopper/static/css/main.4d430b74.css",
-    "main.js": "/shopper/static/js/main.3e23da6f.js",
+    "main.css": "/shopper/static/css/main.c12f0173.css",
+    "main.js": "/shopper/static/js/main.df0cbd4e.js",
     "static/js/787.3c42b466.chunk.js": "/shopper/static/js/787.3c42b466.chunk.js",
+    "static/media/LoginPageImg.jpg": "/shopper/static/media/LoginPageImg.7c3271fc12b14470ae8b.jpg",
+    "static/media/AboutPicture.png": "/shopper/static/media/AboutPicture.02a4773efad071736507.png",
+    "static/media/Employees.png": "/shopper/static/media/Employees.d483a0aa18bbec0c98bc.png",
+    "static/media/googlePlay.png": "/shopper/static/media/googlePlay.18bace7a06eb773165ec.png",
+    "static/media/LenovoBanner.jpg": "/shopper/static/media/LenovoBanner.77d655f473ba36475757.jpg",
+    "static/media/SamsungBanner.jpg": "/shopper/static/media/SamsungBanner.26229ec2ec0386effcd8.jpg",
+    "static/media/GoogleIcon.png": "/shopper/static/media/GoogleIcon.aeb309a8678785836262.png",
+    "static/media/qr.png": "/shopper/static/media/qr.69f8325c74cdfdca91ed.png",
+    "static/media/Statistics.png": "/shopper/static/media/Statistics.343ef799ba2a5c7d11fb.png",
+    "static/media/ContactInfo.png": "/shopper/static/media/ContactInfo.3f8b360c987a15a142e6.png",
+    "static/media/appStore.png": "/shopper/static/media/appStore.85701b32029ee82dc3c4.png",
+    "static/media/LogoAdmin.png": "/shopper/static/media/LogoAdmin.c858ccfe94227f9f2d62.png",
+    "static/media/AppleBanner.jpeg": "/shopper/static/media/AppleBanner.b65cf0736b7277cf6ff0.jpeg",
+    "static/media/ValueProps.png": "/shopper/static/media/ValueProps.4809616f609375454aed.png",
     "index.html": "/shopper/index.html",
-    "main.4d430b74.css.map": "/shopper/static/css/main.4d430b74.css.map",
-    "main.3e23da6f.js.map": "/shopper/static/js/main.3e23da6f.js.map",
+    "main.c12f0173.css.map": "/shopper/static/css/main.c12f0173.css.map",
+    "main.df0cbd4e.js.map": "/shopper/static/js/main.df0cbd4e.js.map",
     "787.3c42b466.chunk.js.map": "/shopper/static/js/787.3c42b466.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d430b74.css",
-    "static/js/main.3e23da6f.js"
+    "static/css/main.c12f0173.css",
+    "static/js/main.df0cbd4e.js"
   ]
 }
