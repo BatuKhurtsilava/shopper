@@ -5,17 +5,13 @@ import { json } from "stream/consumers";
 import { useAuthorizationContext } from "../../../AuthorizationContext";
 import AdminNavigation from "../../../Components/Navigation/AdminNavigation";
 import styles from "./styles.module.css";
+import { login } from "./ApiLogin";
 
 interface IadminLoginPage {
   username: string;
   password: string;
 }
 const AdminLoginPage: React.FC = () => {
-  const adminCreds: IadminLoginPage = {
-    username: "administrator",
-    password: "adminadmin",
-  };
-
   const { setLoggedin, loggedin, response } = useAuthorizationContext();
   const navigate = useNavigate();
   const userRef = useRef<HTMLInputElement>(null);
@@ -34,11 +30,10 @@ const AdminLoginPage: React.FC = () => {
 
   useEffect(() => {
     if (loggedin) {
-      navigate("/admin/loggedin");
+      navigate("/admin");
     }
-  }, [loggedin, navigate]);
+  }, [loggedin]);
 
-  console.log(loggedin);
   return (
     <div className={styles.Container}>
       <form className={styles.Form} onSubmit={handleLogin}>

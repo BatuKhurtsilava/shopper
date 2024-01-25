@@ -1,0 +1,110 @@
+.FilterDiv {
+margin-left: 100px;
+
+}
+
+
+.centeredForm {
+  position:fixed;
+  top: 50vh;
+  left: 50vw;
+  height: 80%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  z-index: 10;
+  overflow-y: auto;
+
+}
+
+.overlay {
+  width: 100vw;
+  height: 250%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(253, 252, 255, 0.848);
+}
+
+.closeButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+
+.closeButton:hover {
+  color: red;
+}
+
+.centeredForm input {
+  width: 100%;
+  padding: 4px; 
+  margin-bottom: 16px;
+}
+
+.centeredForm label {
+  display: inline;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.errorMessage {
+  visibility: visible;
+  color: red;
+  margin-top: 5px;
+}
+
+.ImagesContainer {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+gap: 40px;
+margin-bottom: 20px;
+}
+
+.HomePageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.HomePageContainer h1 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.HomePageContainer h2 {
+  margin-bottom: 100px;
+  font-size: 36px;
+}
+
+.PaginationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.PaginationContainer button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.PaginationContainer button:hover {
+  color: coral;
+}
+
+
+

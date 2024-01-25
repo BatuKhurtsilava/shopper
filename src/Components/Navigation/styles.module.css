@@ -1,6 +1,5 @@
 
 .Container {
-  background-color: coral;
   height: 30px;
   display: flex;
   justify-items: flex-end;
@@ -12,13 +11,6 @@ justify-content: flex-end;
 
 }
 
-.Link {
-  text-decoration: none;
-  color:black;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 5px;
-}
 
 .Link:visited {
   color: inherit; 
@@ -26,4 +18,38 @@ justify-content: flex-end;
 
 .Link:active {
   color: inherit; 
+}
+
+.NavContainer a:active,
+.NavContainer a:focus,
+.NavContainer a:hover {
+  color: coral;
+}
+
+.Image {
+  transform: translate(-15%);
+  width: 150px;
+  height: 150px;
+  left: 10px;
+  
+}
+
+.NavContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+
+.NavContainer a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
 }
