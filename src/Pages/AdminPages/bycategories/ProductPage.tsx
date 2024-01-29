@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useGetData } from "../../../hooks/useGetData";
-import { useQuery } from "@tanstack/react-query";
-import supabase from "../../../services/supabase";
 import styles from "./styles.module.css";
 import ProductCard from "./Components/ProductCard";
 import Pagination from "./Components/Pagination";
@@ -10,7 +8,7 @@ import Filter from "./Components/Filter";
 import Spinner from "./Components/Spinner";
 
 const ProductPage: React.FC<{ category: string }> = ({ category }) => {
-  const { isLoading, products, count, error } = useGetData(category);
+  const { isLoading, products, count } = useGetData(category);
   const { dataForFilter } = useFilterData(category);
 
   if (isLoading) console.log("wow");

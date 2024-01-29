@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { useCreate } from "../../../../hooks/useCreate";
 import { useEdit } from "../../../../hooks/useEdit";
@@ -66,14 +66,14 @@ export const CreateEditForm: React.FC<{
     // setBlured!((prev) => !prev);
   };
 
-  const handleCloseForm = () => {
+  const handleCloseForm = useCallback(() => {
     if (!isEditSession) {
       navigate("/admin");
     } else {
       setFormOpen!((prev) => !prev);
     }
     // setBlured!((prev) => !prev);
-  };
+  }, [isEditSession, navigate, setFormOpen]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -90,7 +90,7 @@ export const CreateEditForm: React.FC<{
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [formOpen]);
+  }, [formOpen, handleCloseForm]);
 
   console.log(errors);
 

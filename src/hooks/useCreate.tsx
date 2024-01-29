@@ -1,5 +1,5 @@
 import supabase from "../services/supabase";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
 export async function createEditProduct(

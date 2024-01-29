@@ -1,16 +1,9 @@
 import React, { useEffect } from "react";
-import { useRef, useState } from "react";
-import { Outlet, useNavigate, Link } from "react-router-dom";
-import { json } from "stream/consumers";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuthorizationContext } from "../../../AuthorizationContext";
-import AdminNavigation from "../../../Components/Navigation/AdminNavigation";
 import styles from "./styles.module.css";
-import { login } from "./ApiLogin";
 
-interface IadminLoginPage {
-  username: string;
-  password: string;
-}
 const AdminLoginPage: React.FC = () => {
   const { setLoggedin, loggedin, response } = useAuthorizationContext();
   const navigate = useNavigate();
@@ -32,7 +25,7 @@ const AdminLoginPage: React.FC = () => {
     if (loggedin) {
       navigate("/admin");
     }
-  }, [loggedin]);
+  }, [loggedin, navigate]);
 
   return (
     <div className={styles.Container}>

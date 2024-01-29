@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Components/Header";
 import { CategoryList } from "../Components/CategoryList";
 import { styled } from "styled-components";
 import Banner from "../Components/Banner";

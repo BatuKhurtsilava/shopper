@@ -1,11 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { routes } from "./routes";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { AuthorizationContextProvider } from "./AuthorizationContext";
-import AdminLoginPage from "./Pages/AdminPages/login/AdminLoginPage";
-import AdminNavigation from "./Components/Navigation/AdminNavigation";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
@@ -25,7 +21,7 @@ function App() {
       <ReactQueryDevtools initialIsOpen={false} />
       <AuthorizationContextProvider>
         <GlobalStyles />
-        <RouterProvider router={createBrowserRouter(routes, { basename })} />
+        <RouterProvider router={createHashRouter(routes, { basename })} />
       </AuthorizationContextProvider>
       <Toaster
         position="top-center"

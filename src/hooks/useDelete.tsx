@@ -1,9 +1,9 @@
 import supabase from "../services/supabase";
-import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
+import {  useQueryClient, useMutation } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
 const deleteProduct = async (Category: string, Id: string) => {
-  const { data, error } = await supabase.from(Category).delete().eq("Id", Id);
+  await supabase.from(Category).delete().eq("Id", Id);
 };
 
 export const useDelete = (Category: string, Id: string) => {

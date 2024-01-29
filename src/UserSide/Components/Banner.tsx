@@ -1,4 +1,4 @@
-import React from "react";
+
 import AppleBanner from "../../Assets/Images/AppleBanner.jpeg";
 import LenovoBanner from "../../Assets/Images/LenovoBanner.jpg";
 import SamsungBanner from "../../Assets/Images/SamsungBanner.jpg";
@@ -64,7 +64,7 @@ const Banner = () => {
     <ImageCarousel>
       <ImagesContainer activeIndex={activeIndex}>
         {bannerImages.map((img, i) => (
-          <img src={img}></img>
+          <img src={img} alt='imagedigital'></img>
         ))}
       </ImagesContainer>
       <div className="buttons">

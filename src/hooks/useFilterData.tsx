@@ -1,7 +1,6 @@
-import React from "react";
 import supabase from "../services/supabase";
 import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 export default function useFilterData(category: string) {
   const [dataForFilter, setDataForFilter] = useState<null | {
@@ -16,7 +15,7 @@ export default function useFilterData(category: string) {
     return Array.from(new Set(arrayForKey));
   }
 
-  const getDataForFilter = async () => {
+  const getDataForFilter = useCallback(async () => {
     const { data: brands } = await supabase.from(category).select("Brand");
     const { data: prices } = await supabase.from(category).select("Price");
     const { data: stocks } = await supabase.from(category).select("Stock");
@@ -35,11 +34,11 @@ export default function useFilterData(category: string) {
         Sales: ["All", ...uniqueSales],
       }));
     }
-  };
+  }, [category]);
 
   useEffect(() => {
     getDataForFilter();
-  }, [dataForFilter]);
+  }, [dataForFilter, getDataForFilter]);
 
   return { dataForFilter };
 }

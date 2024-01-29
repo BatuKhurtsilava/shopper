@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState, Dispatch } from "react";
+import React, {  useState } from "react";
 import styles from "../styles.module.css";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { useDelete } from "../../../../hooks/useDelete";
@@ -20,14 +20,14 @@ export interface IProduct {
 const ProductCard: React.FC<{
   product: IProduct;
 }> = ({ product }) => {
-  const { isDeleting, deleteProductMutation } = useDelete(
+  const {  deleteProductMutation } = useDelete(
     product.Category,
     product.Id
   );
   const [formOpen, setFormOpen] = useState(false);
   return !formOpen ? (
     <div className={styles.ProductCard}>
-      <img style={{ height: "40px", width: "40px" }} src={product.Img1} />
+      <img style={{ height: "40px", width: "40px" }} src={product.Img1} alt='prodImg0' />
       <p style={{ height: "40px", overflow: "hidden" }}>
         Product: {product.Product}{" "}
       </p>

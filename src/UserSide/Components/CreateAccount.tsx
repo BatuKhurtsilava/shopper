@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LoginPageImg from "../../Assets/Images/LoginPageImg.jpg";
 import { styled } from "styled-components";
 import GoogleIcon from "../../Assets/Images/GoogleIcon.png";
